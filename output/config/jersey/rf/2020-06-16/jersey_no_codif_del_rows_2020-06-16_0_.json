@@ -1,0 +1,64 @@
+{
+  "train_pred_path": "..\\output\\train\\jersey\\rf\\2020-06-16\\jersey_no_codif_del_rows_2020-06-16_0_",
+  "test_pred_path": "..\\output\\pred\\jersey\\rf\\2020-06-16\\jersey_no_codif_del_rows_2020-06-16_0_",
+  "model": "rf",
+  "split": 0,
+  "metrics": {
+    "r_train": [
+      0.9841679783946665,
+      6.4118787031006235e-12
+    ],
+    "r_test": [
+      1.0,
+      1.0
+    ],
+    "mse_train": 0.09402738441166472,
+    "mse_test": 0.6751964450010017
+  },
+  "grid_search_params": {
+    "n_estimators": 533,
+    "min_samples_split": 4,
+    "min_samples_leaf": 3,
+    "min_impurity_decrease": 0.2,
+    "max_features": "sqrt",
+    "max_depth": 55,
+    "bootstrap": false
+  },
+  "model_coefs": {
+    "bootstrap": false,
+    "criterion": "mse",
+    "max_depth": 55,
+    "max_features": "sqrt",
+    "max_leaf_nodes": null,
+    "min_impurity_decrease": 0.2,
+    "min_impurity_split": null,
+    "min_samples_leaf": 3,
+    "min_samples_split": 4,
+    "min_weight_fraction_leaf": 0.0,
+    "n_estimators": 533,
+    "n_jobs": null,
+    "oob_score": false,
+    "random_state": null,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "input_cfg": {
+    "X_path": "..\\Input\\jersey\\no_codif_del_rows\\X.npy",
+    "Y_path": "..\\Input\\jersey\\no_codif_del_rows\\Y.npy",
+    "index_train": "..\\Input\\jersey\\no_codif_del_rows\\2020-05-27\\index_train",
+    "index_test": "..\\Input\\jersey\\no_codif_del_rows\\2020-05-27\\index_test",
+    "meta_data": {
+      "base": "jersey",
+      "imputation": "del_rows",
+      "codification": "no_codif",
+      "date": "2020-06-16",
+      "num_splits": 1
+    }
+  },
+  "cv_params": {
+    "n_jobs": -1,
+    "n_iter": 5,
+    "cv": 3
+  },
+  "custom_grid": false
+}

@@ -1,0 +1,13 @@
+require(caTools)
+require(randomForest)
+setwd('C:/Users/Guille/Desktop/rforest')
+X <- read.csv('geno_R.txt', header = TRUE, colClasses = c(rep('factor', 20138)))
+Y <- read.csv('pheno_R.txt', header = TRUE, colClasses = c('numeric'))
+sapply(X,class)
+sample = sample.split(Y$pheno, SplitRatio = .75)
+X_train = subset(X, sample == TRUE)
+X_test = subset(X, sample == FALSE)
+Y_train = subset(Y, sample == TRUE)
+Y_test = subset(Y, sample == FALSE)
+rf <- randomForest(X_train, Y_train[,1], X_test, Y_test[,1], n_tree = 500, mtry = 2000,
+                   nodesize = 5)

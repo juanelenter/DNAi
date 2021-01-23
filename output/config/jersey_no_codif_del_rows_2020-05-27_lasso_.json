@@ -1,0 +1,40 @@
+{
+  "train_pred_path": "..\\output\\train\\jersey\\lasso\\2020-06-05jersey_no_codif_del_rows_2020-05-27.txt",
+  "test_pred_path": "..\\output\\pred\\jersey\\lasso\\2020-06-05jersey_no_codif_del_rows_2020-05-27.txt",
+  "model": "lasso",
+  "grid_search_params": {
+    "max_iter": 3666.6666666666665,
+    "alpha": 1615.3061224489797
+  },
+  "model_coefs": {
+    "alpha": 1615.3061224489797,
+    "copy_X": true,
+    "fit_intercept": true,
+    "max_iter": 3666.6666666666665,
+    "normalize": false,
+    "positive": false,
+    "precompute": false,
+    "random_state": null,
+    "selection": "cyclic",
+    "tol": 0.0001,
+    "warm_start": false
+  },
+  "input_cfg": {
+    "X_path": "..\\Input\\jersey\\no_codif_del_rows\\X.npy",
+    "Y_path": "..\\Input\\jersey\\no_codif_del_rows\\Y.npy",
+    "index_train": "..\\Input\\jersey\\no_codif_del_rows\\2020-05-27\\index_train0.npy",
+    "index_test": "..\\Input\\jersey\\no_codif_del_rows\\2020-05-27\\index_test0.npy",
+    "meta_data": {
+      "base": "jersey",
+      "imputation": "del_rows",
+      "codification": "no_codif",
+      "date": "2020-05-27"
+    }
+  },
+  "cv_params": {
+    "n_jobs": -1,
+    "n_iter": 10,
+    "cv": 5
+  },
+  "custom_grid": false
+}

@@ -1,0 +1,57 @@
+{
+  "train_pred_path": "..\\output\\train\\jersey\\gbm\\2020-06-05jersey_no_codif_del_rows_2020-05-27.txt",
+  "test_pred_path": "..\\output\\pred\\jersey\\gbm\\2020-06-05jersey_no_codif_del_rows_2020-05-27.txt",
+  "model": "gbm",
+  "grid_search_params": {
+    "n_estimators": 1657,
+    "min_samples_split": 100,
+    "min_samples_leaf": 233,
+    "min_impurity_decrease": 0.4444444444444444,
+    "max_features": "sqrt",
+    "max_depth": 1,
+    "loss": "ls",
+    "learning_rate": 0.018484210526315787
+  },
+  "model_coefs": {
+    "alpha": 0.9,
+    "criterion": "friedman_mse",
+    "init": null,
+    "learning_rate": 0.018484210526315787,
+    "loss": "ls",
+    "max_depth": 1,
+    "max_features": "sqrt",
+    "max_leaf_nodes": null,
+    "min_impurity_decrease": 0.4444444444444444,
+    "min_impurity_split": null,
+    "min_samples_leaf": 233,
+    "min_samples_split": 100,
+    "min_weight_fraction_leaf": 0.0,
+    "n_estimators": 1657,
+    "n_iter_no_change": null,
+    "presort": "auto",
+    "random_state": null,
+    "subsample": 1,
+    "tol": 0.0001,
+    "validation_fraction": 0.1,
+    "verbose": 0,
+    "warm_start": false
+  },
+  "input_cfg": {
+    "X_path": "..\\Input\\jersey\\no_codif_del_rows\\X.npy",
+    "Y_path": "..\\Input\\jersey\\no_codif_del_rows\\Y.npy",
+    "index_train": "..\\Input\\jersey\\no_codif_del_rows\\2020-05-27\\index_train0.npy",
+    "index_test": "..\\Input\\jersey\\no_codif_del_rows\\2020-05-27\\index_test0.npy",
+    "meta_data": {
+      "base": "jersey",
+      "imputation": "del_rows",
+      "codification": "no_codif",
+      "date": "2020-05-27"
+    }
+  },
+  "cv_params": {
+    "n_jobs": -1,
+    "n_iter": 10,
+    "cv": 5
+  },
+  "custom_grid": false
+}

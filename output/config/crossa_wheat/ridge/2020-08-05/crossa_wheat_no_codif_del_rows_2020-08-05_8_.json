@@ -1,0 +1,41 @@
+{
+  "train_pred_path": "..\\output\\train\\crossa_wheat\\ridge\\2020-08-05\\crossa_wheat_no_codif_del_rows_2020-08-05_8_.npy",
+  "test_pred_path": "..\\output\\pred\\crossa_wheat\\ridge\\2020-08-05\\crossa_wheat_no_codif_del_rows_2020-08-05_8_.npy",
+  "model": "ridge",
+  "split": "8",
+  "metrics": {
+    "r_train": [
+      0.4248459389336391,
+      4.9393904151845445e-25
+    ],
+    "r_test": [
+      0.28151894732749344,
+      0.02932840771639755
+    ],
+    "mse_train": 0.926189043574853,
+    "mse_test": 1.2179840972085405
+  },
+  "grid_search_params": {
+    "solver": "cholesky",
+    "alpha": 80000.0
+  },
+  "input_cfg": {
+    "X_path": "..\\Input\\crossa_wheat\\no_codif_del_rows\\X.npy",
+    "Y_path": "..\\Input\\crossa_wheat\\no_codif_del_rows\\Y.npy",
+    "index_train": "..\\Input\\crossa_wheat\\no_codif_del_rows\\2020-08-05\\index_train",
+    "index_test": "..\\Input\\crossa_wheat\\no_codif_del_rows\\2020-08-05\\index_test",
+    "meta_data": {
+      "base": "crossa_wheat",
+      "imputation": "del_rows",
+      "codification": "no_codif",
+      "date": "2020-08-05",
+      "num_splits": 10
+    }
+  },
+  "cv_params": {
+    "n_jobs": -1,
+    "n_iter": 50,
+    "cv": 5
+  },
+  "custom_grid": false
+}

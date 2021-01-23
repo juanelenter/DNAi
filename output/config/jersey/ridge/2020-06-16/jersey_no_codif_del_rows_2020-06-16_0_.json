@@ -1,0 +1,51 @@
+{
+  "train_pred_path": "..\\output\\train\\jersey\\ridge\\2020-06-16\\jersey_no_codif_del_rows_2020-06-16_0_",
+  "test_pred_path": "..\\output\\pred\\jersey\\ridge\\2020-06-16\\jersey_no_codif_del_rows_2020-06-16_0_",
+  "model": "ridge",
+  "split": 0,
+  "metrics": {
+    "r_train": [
+      0.9999864722518523,
+      2.2228003268368128e-33
+    ],
+    "r_test": [
+      -1.0,
+      1.0
+    ],
+    "mse_train": 0.0023891040814360454,
+    "mse_test": 0.8035703998389405
+  },
+  "grid_search_params": {
+    "solver": "cholesky",
+    "alpha": 2060.10101010101
+  },
+  "model_coefs": {
+    "alpha": 2060.10101010101,
+    "copy_X": true,
+    "fit_intercept": true,
+    "max_iter": null,
+    "normalize": false,
+    "random_state": null,
+    "solver": "cholesky",
+    "tol": 0.001
+  },
+  "input_cfg": {
+    "X_path": "..\\Input\\jersey\\no_codif_del_rows\\X.npy",
+    "Y_path": "..\\Input\\jersey\\no_codif_del_rows\\Y.npy",
+    "index_train": "..\\Input\\jersey\\no_codif_del_rows\\2020-05-27\\index_train",
+    "index_test": "..\\Input\\jersey\\no_codif_del_rows\\2020-05-27\\index_test",
+    "meta_data": {
+      "base": "jersey",
+      "imputation": "del_rows",
+      "codification": "no_codif",
+      "date": "2020-06-16",
+      "num_splits": 1
+    }
+  },
+  "cv_params": {
+    "n_jobs": -1,
+    "n_iter": 5,
+    "cv": 3
+  },
+  "custom_grid": false
+}

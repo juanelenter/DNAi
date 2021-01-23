@@ -1,0 +1,42 @@
+{
+  "train_pred_path": "..\\output\\train\\jersey\\svm\\2020-06-05jersey_no_codif_del_rows_2020-05-27.txt",
+  "test_pred_path": "..\\output\\pred\\jersey\\svm\\2020-06-05jersey_no_codif_del_rows_2020-05-27.txt",
+  "model": "svm",
+  "grid_search_params": {
+    "kernel": "poly",
+    "gamma": "auto",
+    "epsilon": 0.15000000000000002,
+    "C": 0.32241379310344825
+  },
+  "model_coefs": {
+    "C": 0.32241379310344825,
+    "cache_size": 200,
+    "coef0": 0.0,
+    "degree": 3,
+    "epsilon": 0.15000000000000002,
+    "gamma": "auto",
+    "kernel": "poly",
+    "max_iter": -1,
+    "shrinking": true,
+    "tol": 0.001,
+    "verbose": false
+  },
+  "input_cfg": {
+    "X_path": "..\\Input\\jersey\\no_codif_del_rows\\X.npy",
+    "Y_path": "..\\Input\\jersey\\no_codif_del_rows\\Y.npy",
+    "index_train": "..\\Input\\jersey\\no_codif_del_rows\\2020-05-27\\index_train0.npy",
+    "index_test": "..\\Input\\jersey\\no_codif_del_rows\\2020-05-27\\index_test0.npy",
+    "meta_data": {
+      "base": "jersey",
+      "imputation": "del_rows",
+      "codification": "no_codif",
+      "date": "2020-05-27"
+    }
+  },
+  "cv_params": {
+    "n_jobs": -1,
+    "n_iter": 10,
+    "cv": 5
+  },
+  "custom_grid": false
+}

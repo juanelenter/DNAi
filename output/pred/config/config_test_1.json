@@ -1,0 +1,22 @@
+{
+  "train_pred_path": "..\\output\\train\\yeast\\svm\\2020-05-17\\config_test_1.txt",
+  "test_pred_path": "..\\output\\pred\\yeast\\svm\\2020-05-17\\config_test_1.txt",
+  "grid_search_params": {
+    "kernel": "linear",
+    "gamma": "auto",
+    "C": 0.2
+  },
+  "model_coefs": {
+    "C": 0.2,
+    "cache_size": 200,
+    "coef0": 0.0,
+    "degree": 3,
+    "epsilon": 0.1,
+    "gamma": "auto",
+    "kernel": "linear",
+    "max_iter": -1,
+    "shrinking": true,
+    "tol": 0.001,
+    "verbose": false
+  }
+}

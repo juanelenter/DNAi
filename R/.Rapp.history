@@ -1,0 +1,88 @@
+require(BGLR)#
+#Loads#
+print("loading genotypes, this might take a while") #
+X <- read.csv('../output/y_train.csv', colClasses = rep('numeric', 20138))#
+X_test <- read.csv('../output/X_test.csv', colClasses = rep('numeric', 20138))#
+print("loading fenotypes") #
+y<-t(read.csv('../output/phenotype_sym.csv', colClasses = 'numeric'))#
+whichNa<-read.csv('../output/idx_test.csv', colClasses = 'numeric')#
+y[whichNa]<-NA
+whichNa<-read.csv('../output/idx_test.csv', colClasses = 'integer')
+y[whichNa]<-NA
+whichNa
+whichNa<-t(read.csv('../output/idx_test.csv', colClasses = 'integer'))
+y[whichNa]<-NA
+require(BGLR)#
+#Loads#
+print("loading genotypes, this might take a while") #
+X <- read.csv('../output/snps_matrix.csv', colClasses = rep('integer', 20138))#
+print("loading fenotypes") #
+y<-t(read.csv('../output/phenotype_sym.csv', colClasses = 'numeric'))#
+whichNa<-t(read.csv('../output/idx_test.csv', colClasses = 'integer'))#
+y[whichNa]<-NA#
+print("Starting Gibbs Sampling. Hold on to your hat!")#
+print("Bayes C is my middle name")
+require(BGLR)#
+#Loads#
+print("loading genotypes, this might take a while") #
+X <- read.csv('../output/snps_matrix.csv', colClasses = rep('integer', 20138))#
+print("loading fenotypes") #
+y<-t(read.csv('../output/phenotype_sym.csv', colClasses = 'numeric'))#
+whichNa<-t(read.csv('../output/idx_test.csv', colClasses = 'integer'))#
+y[whichNa]<-NA#
+print("Starting Gibbs Sampling. Hold on to your hat!")#
+print("Bayes C is my middle name")
+nIter=1000;#
+burnIn=100;#
+thin=1;#
+saveAt='';#
+S0=NULL;#
+weights=NULL;#
+R2=0.5;#
+ETA<-list(list(X=X,model='BayesC'))#
+fit_BC=BGLR(y=y,ETA=ETA,nIter=nIter,burnIn=burnIn,thin=thin,saveAt=saveAt,df0=5,S0=S0,weights=weights,R2=R2)#
+#
+y_pred_BC<-fit_BC$yHat#
+write.table(y_pred_BC, "../output/Y_bc.csv", row.names = FALSE, col.names = FALSE)
+require(BGLR)#
+#Loads#
+print("loading genotypes, this might take a while") #
+X <- read.csv('../output/snps_matrix.csv', colClasses = rep('integer', 20138), header = FALSE)#
+print("loading fenotypes") #
+y<-t(read.csv('../output/phenotype_sym.csv', colClasses = 'numeric'), header = FALSE)#
+whichNa<-t(read.csv('../output/idx_test.csv', colClasses = 'integer'), header = FALSE)#
+y[whichNa]<-NA#
+print("Starting Gibbs Sampling. Hold on to your hat!")#
+print("Bayes C is my middle name")
+require(BGLR)#
+#Loads#
+print("loading genotypes, this might take a while") #
+X <- read.csv('../output/snps_matrix.csv',header = FALSE, colClasses = rep('integer', 20138))#
+print("loading fenotypes") #
+y<-t(read.csv('../output/phenotype_sym.csv', colClasses = 'numeric'), header = FALSE)#
+whichNa<-t(read.csv('../output/idx_test.csv', colClasses = 'integer'), header = FALSE)#
+y[whichNa]<-NA#
+print("Starting Gibbs Sampling. Hold on to your hat!")#
+print("Bayes C is my middle name")
+require(BGLR)#
+#Loads#
+print("loading genotypes, this might take a while") #
+X <- read.csv('../output/sim/snps_matrix.csv',header = FALSE, colClasses = rep('integer', 20138))#
+print("loading fenotypes") #
+y<-t(read.csv('../output/sim/phenotype_sym.csv',header = FALSE, colClasses = 'numeric'))#
+whichNa<-t(read.csv('../output/sim/idx_test.csv',header = FALSE, colClasses = 'integer'))#
+y[whichNa]<-NA#
+print("Starting Gibbs Sampling. Hold on to your hat!")#
+print("Bayes C is my middle name")
+nIter=1000;#
+burnIn=100;#
+thin=1;#
+saveAt='';#
+S0=NULL;#
+weights=NULL;#
+R2=0.5;#
+ETA<-list(list(X=X,model='BayesC'))#
+fit_BC=BGLR(y=y,ETA=ETA,nIter=nIter,burnIn=burnIn,thin=thin,saveAt=saveAt,df0=5,S0=S0,weights=weights,R2=R2)#
+#
+y_pred_BC<-fit_BC$yHat#
+write.table(y_pred_BC, "../output/Y_bc.csv", row.names = FALSE, col.names = FALSE)
