@@ -1,4 +1,7 @@
-# DNAi
+# DNAi: Genome-enabled prediction of complex traits using ML.
+
+
+Repository under construction.
 # Loggear experimentos:
 
 ## Instalation
